@@ -1,0 +1,147 @@
+html,body
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace,sans-serif;
+    min-height: 100vh;
+    
+}
+
+/*FORMATAÇÃO DO GRID DA PAGINA EM GERAL CABECALHO MEIO E RODA PÉ*/
+.container
+{
+    
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 15vh auto 10vh;
+    grid-template-areas: "header header"
+                        "main main"
+                        "footer footer";
+}
+
+/* FORMATAÇÃO DA BARRA HEADER (CABEÇALHO)*/
+.header-body
+{   
+    position: relative;
+
+    background-color: blue;
+
+    grid-area: header;
+}
+
+/*FORMATAÇÃO DA PARTE DO MAIN (MEIO) */
+.main-body
+{
+    grid-area: main;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+   
+}
+
+/* FORMATAÇÃO DA GRID DOS CAMPOS DE PRODUTOS*/
+.main-body .grid-layout
+{   
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
+    grid-gap: 15px;
+
+
+}
+
+
+/* FORMATAÇÃO DO GRID DO PAINEL DE AMOSTRA*/
+ .grid-layout .content
+{   
+    
+    width: auto;
+    height: 80vh;
+
+    display: grid;
+    grid-template-rows: 15% 73% 30px ; 
+    grid-template-areas:"nome nome" 
+                        "imagem imagem" 
+                        "carrinho carrinho";
+
+  
+}
+
+/*FORMATAÇÃO DAS ÁREAS DO PAINEL DO DE AMOSTRA*/
+/*FORMATAÇÃO DA BARRA DE TEXTO DO NOME DO PRODUTO*/
+.grid-layout .content .bar-text
+{   
+    
+    background: #ffffff;
+
+    height: 100%;
+
+    grid-area: nome;
+}
+
+
+.grid-layout .content .bar-text p
+{   
+    position: relative;
+    margin-left: 10px;
+    top: -15px;
+
+    
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+   
+    grid-area: nome;
+    
+}
+
+/* FORMATAÇÃO DO CAMPO DA IMAGEM E A IMAGEM DO PRODUTO*/
+.grid-layout .content .imgBox
+{   
+   
+    height: 100%;
+    width: 100%;
+
+    grid-area: imagem; 
+}
+
+.grid-layout .content .imgBox img 
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*FORMATAÇÃO DO CAMPO DE ITENS , QUANTIDADE E VALOR DO PRODUTO SELECIONADO */
+.grid-layout .content .barbox
+{   
+    
+    background: #ffffff;
+
+    grid-area: carrinho;
+}
+
+
+
+/* FORMATAÇÃO DO FOOTER/ RODA PÉ*/
+.container .footer-body
+{   
+    position: relative;
+    
+    background: blue;
+
+    grid-area: footer;
+      
+}
+
